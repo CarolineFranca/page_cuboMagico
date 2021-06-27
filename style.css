@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 75%, #444444, #171717 30%);
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    grid-template-rows: 25fr 50fr 25fr;
+}
+
+.title, .title2{
+    font-size: 7em;    
+    grid-column: 1;
+    grid-row: 2;
+    color: #DDDDDD;
+    animation: start-animation 2s ease-out;
+}
+
+.title{
+    margin-left: 1.5em;
+}
+
+.title2{
+    line-height: 400px;
+    margin-left: 2.3em;
+}
+
+.imagem{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+}
+
+.imagem img{
+    width: 27em;
+    margin: auto;    
+    animation: start-animation 2s ease-out;
+}
+
+
+button{
+    background-color: rgba(255, 255, 255, 0);    
+    color: #e5e5e5;    
+    width: 300px;
+    height: 45px;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    font-size: 20px;
+    line-height: 45px;
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    margin-left: 170px;
+    align-self: flex-end;
+    padding-left: 22px;
+    margin-bottom: 80px;
+    animation: start-animation 2s ease-out;
+}
+
+button:hover{
+    background-color: #e5e5e5;
+    color: #171717;
+    cursor: pointer;
+    animation: btn-animation 1s ease-out;
+}
+
+
+footer{
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    color: #444444ab;
+    margin-bottom: 5px;
+    font-size: 0.7em;
+}
+
+footer:hover{
+    color: #e5e5e5;
+    cursor: pointer;
+}
+
+
+/* ANIMATION */
+
+@keyframes btn-animation{
+    0%{
+        background-color: #171717;
+    }
+    
+    50%{
+        background-color: #e5e5e5a6;
+    }
+
+    100%{
+        background-color: #e5e5e5;
+    }
+}
+
+
+@keyframes start-animation{
+
+    0%{
+        transform: translateY(0px);
+        color: #dddddd00;
+        
+    }
+    
+    25%{
+        transform: translateY(-20px);
+        color: #dddddd4d;
+        
+    }
+
+    50%{
+        transform: translateY(20px);         
+        color: #dddddd85;
+    }
+
+    100%{
+        transform: translateY(0px);         
+        color: #DDDDDD;
+
+    }
+}
+
+
+ /* RESPONSIVE  */
+
+ @media screen and (max-width: 1159px){
+
+        .container{
+
+            background: radial-gradient(circle at 78%, #444444, #171717 30%);
+        }
+
+        .title, .title2{
+            font-size: 5em;
+        }
+
+        .title2{
+            line-height: 300px;
+        }
+
+        .imagem img{
+            width: 22em;
+        }
+ }
+
+ 
